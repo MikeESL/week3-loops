@@ -58,6 +58,12 @@ $(".sec").append(secTemplate(secEast));
 //JQ each
 
 
+
+$(".each").each( function(index) {
+
+    $(this).css("border", "10px solid black");
+});
+
 });
 
 

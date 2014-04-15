@@ -1,18 +1,22 @@
+$(document).ready(function() {
+
 var bestTeams = ["Notre Dame", "Southern California", "Alabama", "Nebraska", "Texas" ];
 
 var teamTemplate = function(data){
 	var markup = "";
 	var i;
 
-	for ( i=0; i<data.length; i++) {
+	for ( i = 0; i < data.length; i++) {
 		markup += "<li>" + data[i] + "</li>";
 		
 	}
 
-	return markup
+	return markup;
+};
 
-}
 $(".teams").append(teamTemplate(bestTeams));
+
+});
 
 
 

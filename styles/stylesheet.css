@@ -14,10 +14,10 @@ h1{
 
 
 
-.loop1{
+.loop1 .loop2 .loop3{
 	background-color:#FFFF66;
 	width: 100%;
-	min-height: 500px;
+	min-height: 200px;
 	border: 2px solid black;
 	border-radius: 8px;
 	padding: 15px;
@@ -25,14 +25,13 @@ h1{
 div{
 	background-color: orange;
 	width: 75%;
-	min-height: 4000px;
+	min-height: 180px;
 	border: 1px solid black;
 	border-radius: 10px;
 
 }
-.teams{
-	background-color: tomato;
-}
+
+
 
 
 

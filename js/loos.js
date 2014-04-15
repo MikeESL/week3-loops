@@ -16,11 +16,54 @@ var teamTemplate = function(data){
 
 $(".teams").append(teamTemplate(bestTeams));
 
+
+//second loop | favorite bands with active a tag
+
+var bandLinks = ["<a href=\"http://slimcessnasautoclub.com\">Slim Cessna's Auto Club</a>", "<a href=\"http://www.thosepoorbastards.com\">Those Poor Bastards</a>" , "<a href=\"http://www.handsomefamily.com\">The Handsome Family</a>"];
+
+   var bandsTemplate = function(favbands) {
+
+   		var markup = "";
+   		var i;
+
+   		for( i=0; i<favbands.length; i++) {
+   			markup += "<li>" + favbands[i] + "</li>";
+   		}
+
+   		return markup;
+   		
+   };
+
+   $(".bands").append(bandsTemplate(bandLinks));
+
+//third loop below ; table instead of ul-li
+
+var secEast = ["Georgia", "South Carolina", "Vanderbilt", "Florida", "Tennessee", "Missouri", "Kentucky", ];
+
+var secTemplate = function(secdata){
+	var markup = "";
+	var i;
+
+	for ( i = 0; i < secdata.length; i++) {
+		markup += "<tr><td>" + secdata[i] + "</td></tr>";
+		}
+		
+	return markup;
+};
+
+$(".sec").append(secTemplate(secEast));
+
+
+
+//JQ each
+
+
 });
 
 
 
-// tried and failed:
+
+// tried and failed (conversion table):
 //var inchArray = [0, 30, 48, 60, 80, 96 ];
 
 //var convertTemplate = function(data){
@@ -40,9 +83,6 @@ $(".teams").append(teamTemplate(bestTeams));
 
 
 
-//inchesTemplate(someArray);
-//var someArray = ["hello", "mike"];
 
-//$("body").append(inchesTemplate(someArray));
 
 

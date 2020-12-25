@@ -1,68 +1,63 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
-var bestTeams = ["Notre Dame", "Southern California", "Alabama", "Nebraska", "Texas" ];
+	var bestTeams = ["Notre Dame", "Southern California", "Alabama", "Nebraska", "Texas"];
 
-var teamTemplate = function(data){
-	var markup = "";
-	var i;
+	var teamTemplate = function (data) {
+		var markup = "";
+		for (dta of data) {
+			markup += "<li>" + dta + "</li>";
 
-	for ( i = 0; i < data.length; i++) {
-		markup += "<li>" + data[i] + "</li>";
-		
-	}
-
-	return markup;
-};
-
-$(".teams").append(teamTemplate(bestTeams));
-
-
-//second loop | favorite bands with active a tag
-
-var bandLinks = ["<a href=\"http://slimcessnasautoclub.com\">Slim Cessna's Auto Club</a>", "<a href=\"http://www.thosepoorbastards.com\">Those Poor Bastards</a>" , "<a href=\"http://www.handsomefamily.com\">The Handsome Family</a>"];
-
-   var bandsTemplate = function(favbands) {
-
-   		var markup = "";
-   		var i;
-
-   		for( i=0; i<favbands.length; i++) {
-   			markup += "<li>" + favbands[i] + "</li>";
-   		}
-
-   		return markup;
-   		
-   };
-
-   $(".bands").append(bandsTemplate(bandLinks));
-
-//third loop below ; table instead of ul-li
-
-var secEast = ["Georgia", "South Carolina", "Vanderbilt", "Florida", "Tennessee", "Missouri", "Kentucky", ];
-
-var secTemplate = function(secdata){
-	var markup = "";
-	var i;
-
-	for ( i = 0; i < secdata.length; i++) {
-		markup += "<tr><td>" + secdata[i] + "</td></tr>";
 		}
-		
-	return markup;
-};
 
-$(".sec").append(secTemplate(secEast));
+		return markup;
+	};
 
-
-
-//JQ each
+	$(".teams").append(teamTemplate(bestTeams));
 
 
+	//second loop | favorite bands with active a tag
 
-$(".each").each( function(index) {
+	var bandLinks = ["<a href=\"http://slimcessnasautoclub.com\">Slim Cessna's Auto Club</a>", "<a href=\"http://www.thosepoorbastards.com\">Those Poor Bastards</a>", "<a href=\"http://www.handsomefamily.com\">The Handsome Family</a>"];
 
-    $(this).css("border", "10px solid black");
-});
+	var bandsTemplate = function (favbands) {
+
+		var markup = "";
+
+		for (fbands of favbands) {
+			markup += "<li>" + fbands + "</li>";
+		}
+
+		return markup;
+
+	};
+
+	$(".bands").append(bandsTemplate(bandLinks));
+
+	//third loop below ; table instead of ul-li
+
+	var secEast = ["Georgia", "South Carolina", "Vanderbilt", "Florida", "Tennessee", "Missouri", "Kentucky",];
+
+	var secTemplate = function (secdata) {
+		var markup = "";
+		for (sdata of secdata) {
+			markup += "<tr><td>" + sdata + "</td></tr>";
+		}
+
+		return markup;
+	};
+
+	$(".sec").append(secTemplate(secEast));
+
+
+
+	//JQ each
+
+
+
+	$(".each").each(function (index) {
+
+		$(this).css("border", "10px solid black");
+	});
 
 });
 
@@ -75,7 +70,7 @@ $(".each").each( function(index) {
 //var convertTemplate = function(data){
 //    var markup = "";
 //    var i;  
-    
+
 //    for ( i = 0; i<inchArray.length ; i++ ) {
 //        markup +="<div class='feet'>" + i + "</div><div class='inches'>" + (i / 12) + "</div>";
 //	}
